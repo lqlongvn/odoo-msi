@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--   Phân Group quyền cho product-->
+        <record model="ir.module.category" id="product_category_group_id">
+            <field name="name">Product Group</field>
+            <field name="description">Product Group</field>
+            <field name="sequence">7</field>
+        </record>
+
+        <record id="group_product_user" model="res.groups">
+            <field name="name">Product User</field>
+            <field name="category_id" ref="first_module.product_category_group_id"/>
+<!--            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>-->
+        </record>
+
+        <record id="group_product_manager" model="res.groups">
+            <field name="name">Product Manager</field>
+            <field name="category_id" ref="first_module.product_category_group_id"/>
+            <field name="implied_ids" eval="[(4, ref('first_module.group_product_user'))]"/>
+        </record>
+
+        <!--   Tạo Group quyền cho category -->
+        <record model="ir.module.category" id="categories_group_id">
+            <field name="name">Categories Group</field>
+            <field name="description">Categories Group</field>
+            <field name="sequence">7</field>
+        </record>
+
+        <record id="group_categories_user" model="res.groups">
+            <field name="name">Categories User</field>
+            <field name="category_id" ref="first_module.categories_group_id"/>
+        </record>
+
+        <record id="group_categories_manager" model="res.groups">
+            <field name="name">Categories Manager</field>
+            <field name="category_id" ref="first_module.categories_group_id"/>
+            <field name="implied_ids" eval="[(4, ref('first_module.group_categories_user'))]"/>
+        </record>
+
+        <!--   Tạo Group quyền cho supplier -->
+        <record model="ir.module.category" id="supplier_group_id">
+            <field name="name">Supplier Group</field>
+            <field name="description">Supplier Group</field>
+            <field name="sequence">7</field>
+        </record>
+
+        <record id="group_supplier_user" model="res.groups">
+            <field name="name">Supplier User</field>
+            <field name="category_id" ref="first_module.supplier_group_id"/>
+        </record>
+
+        <record id="group_supplier_manager" model="res.groups">
+            <field name="name">Supplier Manager</field>
+            <field name="category_id" ref="first_module.supplier_group_id"/>
+            <field name="implied_ids" eval="[(4, ref('first_module.group_supplier_user'))]"/>
+        </record>
+
+
+    </data>
+</odoo>

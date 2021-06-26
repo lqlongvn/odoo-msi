@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="order_line_tree_view" model="ir.ui.view">
+            <field name="name">Order Tree View</field>
+            <field name="model">order_line</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="created_date"/>
+                    <field name="order_id"/>
+                    <field name="qty"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="order_line_form_view" model="ir.ui.view">
+            <field name="name">Order Form View</field>
+            <field name="model">order_line</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="created_date"/>
+                                <field name="order_id"/>
+                            </group>
+                            <group>
+                                <field name="qty"/>
+                            </group>
+
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="order_line_action_1" model="ir.actions.act_window">
+            <field name="name">Order_lines</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">order_line</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+<!--        <menuitem id="customer_root_menu" name="Quản lý Customer" sequence="1"/>-->
+        <menuitem id="order_line_menu_1" name="Order_lines" parent = "bt1.customer_root_menu" action="bt1.order_line_action_1" sequence="4"/>
+
+    </data>
+</odoo>

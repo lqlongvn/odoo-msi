@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="list_customer_by_order_action" model="ir.actions.act_window">
+            <field name="name">Products</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">customer</field>
+            <field name="view_mode">tree,form</field>
+<!--            <field name="domain">[('category_id', '=', active_id)]</field>-->
+        </record>
+
+        <record id="order_tree_view" model="ir.ui.view">
+            <field name="name">Order Tree View</field>
+            <field name="model">order</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="order_date"/>
+                    <field name="customer_id"/>
+                    <field name="order_line_ids"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="order_form_view" model="ir.ui.view">
+            <field name="name">Order Form View</field>
+            <field name="model">order</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <header>
+                        <button name="cancel_order" string="Cancel Order" type="object" class="btn-primary"  style="background-color:red;"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button class="oe_stat_button" type="action"
+                                    name="%(bt1.list_customer_by_order_action)d">
+                                <field name="customer_count" widget="statinfo"/>
+                            </button>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="order_date"/>
+                                <field name="order_line_ids"/>
+<!--                                <field name="state"/>-->
+                            </group>
+                            <group>
+                                <field name="customer_id"/>
+                            </group>
+
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="order_action_1" model="ir.actions.act_window">
+            <field name="name">Orders</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">order</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+<!--        <menuitem id="customer_root_menu" name="Quản lý Customer" sequence="1"/>-->
+        <menuitem id="order_menu_1" name="Order" parent = "bt1.customer_root_menu" action="bt1.order_action_1" sequence="3"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="customer_tree_view" model="ir.ui.view">
+            <field name="name">Customer Tree View</field>
+            <field name="model">customer</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="name"/>
+                    <field name="gender" />
+                    <field name="phone" />
+                    <field name="add" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="customer_form_view" model="ir.ui.view">
+            <field name="name">Customer Form View</field>
+            <field name="model">customer</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="phone"/>
+                            </group>
+                            <group>
+                                <field name="gender"/>
+                                <field name="add"/>
+                            </group>
+
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="customer_action_1" model="ir.actions.act_window">
+            <field name="name">Customers</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">customer</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <menuitem id="customer_root_menu" name="Quản lý Customer" sequence="1"/>
+        <menuitem id="customer_menu_1" name="Customer" parent = "bt1.customer_root_menu" action="bt1.customer_action_1" sequence="1"/>
+
+
+<!--        <menuitem id="first_module_employee_menu" name="Employees" parent="first_module.first_module_root_menu"-->
+<!--                  action="first_module.first_module_employee_action" sequence="3"/>-->
+
+    </data>
+</odoo>
