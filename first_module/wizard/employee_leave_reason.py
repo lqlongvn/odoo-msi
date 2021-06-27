@@ -8,7 +8,8 @@ class EmployeeLeaveReason(models.TransientModel):
 
     def update_leave_reason(self):
         employee_id = self.env.context.get('active_id', False)
-        employee_record = self.env['employee'].browse(employee_id)
+        # employee_record = self.env['employee'].browse(employee_id)
+        employee_record = self.env['employee'].search([('name', '=', ' Le Van Ve')])
         print(employee_id)
         print((employee_record))
         return True
