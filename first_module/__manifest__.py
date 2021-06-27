@@ -12,6 +12,7 @@
     'website': '',
     'depends': ['sales_team'],
     'data': [
+        'wizard/employee_leave_reason_view.xml',
         'views/product_view.xml',
         'views/categories_view.xml',
         'views/supplier_view.xml',

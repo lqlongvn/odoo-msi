@@ -22,7 +22,8 @@
                     <header>
                         <button name="toggle_active" string="Un-Archive" type="object" class="btn-primary" attrs = "{'invisible': [('active', '=', True)]}"/>
                         <button name="toggle_active" string="Archive" type="object" class="btn-primary" attrs = "{'invisible': [('active', '=', False)]}"/>
-                        <button name="leave" string="Leave" type="object" states="0"/>
+<!--                        <button name="leave" string="Leave" type="object" states="0"/>-->
+                        <button string="Leave" type="action" name="%(first_module.employee_leave_reason_action)d" states="0"/>
                         <button name="work" string="Work" type="object" states="1, 2, 3"/>
                         <field name="state" widget="statusbar" />
                     </header>
