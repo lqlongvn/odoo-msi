@@ -17,3 +17,7 @@ class Employee(models.Model):
 
     def work(self):
         self.state = '0'
+
+    def write(self, vals):
+        return super(Employee, self).write(vals)
+
