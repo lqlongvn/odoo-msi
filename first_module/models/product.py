@@ -18,6 +18,10 @@ class Product(models.Model):
     price_with_tax = fields.Float(string='Price with Tax', compute='get_price_with_tax')
     active = fields.Boolean(string='Active', default=True)
     category_id = fields.Many2one(comodel_name='product.categories', string ='Category')
+    # category_id = fields.Many2one('product.categories', 'Category')
+    supplier_ids = fields.Many2many(comodel_name='supplier', relation='supplier_product_rel', column1='product_id',
+                                    column2='supplier_id', string='Suppliers')
+
 
     @api.depends('vat', 'price')
     def get_price_with_tax(self):

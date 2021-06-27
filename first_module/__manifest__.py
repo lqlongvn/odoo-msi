@@ -14,6 +14,7 @@
     'data': [
         'views/product_view.xml',
         'views/categories_view.xml',
+        'views/supplier_view.xml',
         'views/employee_view.xml',
         'security/security.xml',
         'security/ir.model.access.csv',
