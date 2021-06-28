@@ -1,3 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_employees_user,access_employees_user,model_employees,test_odoo.group_employees_user,1,0,0,0
-access_employees_manager,access_employees_manager,model_employees,test_odoo.group_employees_manager,1,1,1,1
+access_employees2_user,access_employees2_user,model_employees2,test_odoo.group_employees_user,1,0,0,0
+access_employees2_manager,access_employees2_manager,model_employees2,test_odoo.group_employees_manager,1,1,1,1
