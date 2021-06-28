@@ -9,6 +9,17 @@ class Customer(models.Model):
     add = fields.Char(string='Address')
     gender = fields.Char(string='Giới tính', default="male")
 
+    customer_count = fields.Integer(compute='get_customer_count', string='Count', store=True)
+
+    # @api.depends('order_line_ids')
+    def get_customer_count(self):
+        pass
+        return True
+        # for order in self:
+            # print(order.order_ids[0].customer_id)
+            # order.customer_count = 8
+            # order.customer_count = len(order.order_line_ids)
+
     @api.model
     def create(self, vals):
         vals['name'] = vals['name'].title()
