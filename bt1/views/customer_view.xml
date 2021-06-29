@@ -6,7 +6,7 @@
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">customer</field>
             <field name="view_mode">tree,form</field>
-            <field name="domain">[('category_id', '=', active_id)]</field>
+            <field name="domain">[('id', '=', active_id)]</field>
         </record>
 
         <record id="customer_tree_view" model="ir.ui.view">
