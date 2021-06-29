@@ -18,6 +18,7 @@
                     <field name="gender" />
                     <field name="phone" />
                     <field name="add" />
+                    <field name="order_ids"/>
                 </tree>
             </field>
         </record>
@@ -38,6 +39,7 @@
                             <group>
                                 <field name="name"/>
                                 <field name="phone"/>
+                                <field name="order_ids"/>
                             </group>
                             <group>
                                 <field name="gender"/>

@@ -4,7 +4,8 @@ class Order(models.Model):
     _name = 'order'
 
     # customer_id = fields.Integer(string='Customer ID of Order')
-    customer_id = fields.Many2one('order', string='Customer')
+    # customer_id = fields.Many2one('order', string='Customer')
+    customer_id = fields.Many2one(comodel_name='customer', string='Customers')
 
 
     order_date = fields.Datetime(string='Order Date')
