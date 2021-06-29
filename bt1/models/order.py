@@ -3,7 +3,10 @@ from odoo import fields, models, api
 class Order(models.Model):
     _name = 'order'
 
-    customer_id = fields.Integer(string='Customer ID of Order')
+    # customer_id = fields.Integer(string='Customer ID of Order')
+    customer_id = fields.Many2one('order', string='Customer')
+
+
     order_date = fields.Datetime(string='Order Date')
     total_amount = fields.Float(string='Total amount')
 
@@ -15,6 +18,7 @@ class Order(models.Model):
         selection=[('0', 'Dang thực hiện order'), ('1', 'Hủy bỏ order')],
         string='State')
     active = fields.Boolean(default=True, string='Active')
+
 
     customer_count = fields.Integer(compute='get_customer_count', string='Count', store=True)
 
