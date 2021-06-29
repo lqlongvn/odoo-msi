@@ -2,7 +2,7 @@
 <odoo>
     <data>
         <record id="list_customer_by_order_action" model="ir.actions.act_window">
-            <field name="name">Products</field>
+            <field name="name">Customer-Order</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">customer</field>
             <field name="view_mode">tree,form</field>
@@ -29,12 +29,12 @@
             <field name="arch" type="xml">
                 <form string="">
                     <sheet>
-<!--                        <div class="oe_button_box" name="button_box">-->
-<!--                            <button class="oe_stat_button" type="action"-->
-<!--                                    name="%(bt1.list_customer_by_order_action)d">-->
-<!--                                <field name="customer_count" widget="statinfo"/>-->
-<!--                            </button>-->
-<!--                        </div>-->
+                        <div class="oe_button_box" name="button_box">
+                            <button class="oe_stat_button" type="action"
+                                    name="%(bt1.list_customer_by_order_action)d">
+                                <field name="customer_order_count" widget="statinfo"/>
+                            </button>
+                        </div>
                         <group>
                             <group>
                                 <field name="name"/>
