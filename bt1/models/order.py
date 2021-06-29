@@ -31,5 +31,14 @@ class Order(models.Model):
             order.customer_count = len(order.order_line_ids)
 
     def cancel_order(self):
-        self.state = '3'
+        if self.state == '3':
+            self.state = '0'
+        elif self.state == '0':
+            self.state = '1'
+        elif self.state == '1':
+            self.state = '2'
+        elif self.state == '2':
+            self.state = '3'
+        else:
+            self.state = '0'
         # self.active = not self.active
