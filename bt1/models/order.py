@@ -16,10 +16,10 @@ class Order(models.Model):
 
     order_line_ids = fields.One2many(comodel_name='order_line', inverse_name='order_id', string='Lines')
     state = fields.Selection(
-        selection=[('0', 'Dang thực hiện order'), ('1', 'Hủy bỏ order')],
-        string='State')
-    active = fields.Boolean(default=True, string='Active')
+        selection=[('0', 'Draft'), ('1', 'Doing'), ('2', 'Done'), ('3', 'Cancel order')],
+        string='Trạng thái')
 
+    active = fields.Boolean(default=True, string='Active')
 
     customer_count = fields.Integer(compute='get_customer_count', string='Count', store=True)
 
@@ -30,8 +30,6 @@ class Order(models.Model):
             # order.customer_count = 8
             order.customer_count = len(order.order_line_ids)
 
-
-
     def cancel_order(self):
-        pass
+        self.state = '3'
         # self.active = not self.active
