@@ -1,4 +1,4 @@
-from odoo import fields, models, api
+from odoo import fields, models, api, osv
 
 class Order(models.Model):
     _name = 'order'
@@ -42,3 +42,11 @@ class Order(models.Model):
         else:
             self.state = '0'
         # self.active = not self.active
+
+    def unlink(self):
+        if self.state != '2':
+            return super(Order, self).unlink()
+        # else:
+        # raise Warning(('Attention!'), ('Hello'))
+
+
