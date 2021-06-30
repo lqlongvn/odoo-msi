@@ -29,7 +29,7 @@
             <field name="arch" type="xml">
                 <form string="">
                     <sheet>
-                        <div class="oe_button_box" name="button_box">
+                    <div class="oe_button_box" name="button_box">
                             <button class="oe_stat_button" type="action"
                                     name="%(bt1.list_customer_by_order_action)d">
                                 <field name="customer_order_count" widget="statinfo"/>
@@ -43,11 +43,8 @@
                             </group>
                             <group>
                                 <field name="gender"/>
-                                <field name="add" attrs = "{'invisible': [('phone', '=', '')]}"/>
-<!--                                <field name="add" attrs = "{'required': [('phone', '=', '12-34-56-78')]}"/>-->
-<!--                                <field name="add"/>-->
+                                <field name="add" attrs = "{'invisible': [('phone', '=', False)]}"/>
                             </group>
-
                         </group>
                     </sheet>
                 </form>
