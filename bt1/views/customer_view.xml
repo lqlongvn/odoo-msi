@@ -43,7 +43,9 @@
                             </group>
                             <group>
                                 <field name="gender"/>
-                                <field name="add"/>
+                                <field name="add" attrs = "{'invisible': [('phone', '=', '')]}"/>
+<!--                                <field name="add" attrs = "{'required': [('phone', '=', '12-34-56-78')]}"/>-->
+<!--                                <field name="add"/>-->
                             </group>
 
                         </group>
