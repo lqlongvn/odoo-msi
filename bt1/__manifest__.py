@@ -12,6 +12,7 @@
     'website': '',
     'depends': ['sales_team'],
     'data': [
+        'wizard/count_order_of_customer_view.xml',
         'views/customer_view.xml',
         'views/order_view.xml',
         'views/order_line_view.xml',

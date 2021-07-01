@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="count_order_of_customer_form_view" model="ir.ui.view">
+            <field name="name">Display order count of Customer</field>
+            <field name="model">count.order</field>
+            <field name="arch" type="xml">
+                <form string="Order count of Customer">
+<!--                    <group>-->
+<!--                        <field name="reason" required="1"/>-->
+<!--                    </group>-->
+                    <footer>
+                        <button string="Cancel" special="cancel" class="btn-secondary"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="order_count_action" model="ir.actions.act_window">
+            <field name="name">Order count of Customer</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">count.order</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</odoo>
