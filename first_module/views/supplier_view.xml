@@ -37,7 +37,7 @@
         </record>
 
         <menuitem id="first_module_supplier_menu" name="Supplier" parent="first_module.first_module_root_menu"
-                  action="first_module.first_module_supplier_action" sequence="4"/>
+                  action="first_module.first_module_supplier_action" sequence="4" groups="first_module.group_product_manager"/>
 
     </data>
 </odoo>

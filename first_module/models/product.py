@@ -22,6 +22,7 @@ class Product(models.Model):
     supplier_ids = fields.Many2many(comodel_name='supplier', relation='supplier_product_rel', column1='product_id',
                                     column2='supplier_id', string='Suppliers')
 
+    cost = fields.Integer(string='Cost')
 
     @api.depends('vat', 'price')
     def get_price_with_tax(self):

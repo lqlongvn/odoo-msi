@@ -10,7 +10,7 @@
                     <field name="name"/>
                     <field name="price"/>
                     <field name="category_id"/>
-                    <field name="supplier_ids" widget="many2many_tags"/>
+                    <field name="supplier_ids" widget="many2many_tags" groups="first_module.group_product_manager"/>
                     <field name="vat"/>
                     <field name="price_with_tax"/>
                     <field name="purchase_date"/>
@@ -29,8 +29,9 @@
                             <group>
                                 <field name="name" string="Product Name"/>
                                 <field name="category_id"/>
-                                <field name="supplier_ids" widget="many2many_tags"/>
+                                <field name="supplier_ids" widget="many2many_tags" groups="first_module.group_product_manager"/>
                                 <field name="warranty"/>
+                                <field name="cost" groups="first_module.group_product_manager"/>
 <!--                                <field name="active"/>-->
                             </group>
                             <group>
