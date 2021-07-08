@@ -38,6 +38,22 @@
             </field>
         </record>
 
+        <record id="products_search_view" model="ir.ui.view">
+            <field name="name">Products Search</field>
+            <field name="model">products</field>
+            <field name="arch" type="xml">
+                <search string="">
+                    <field name="name"/>
+                    <field name="description"/>
+                    <group>
+                        <filter string="Group By Date" name="group_products_by_date"
+                                context="{'group_by':'date'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+
         <record id="products_action_1" model="ir.actions.act_window">
             <field name="name">Order_lines</field>
             <field name="type">ir.actions.act_window</field>

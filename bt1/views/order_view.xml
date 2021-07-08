@@ -54,6 +54,21 @@
             </field>
         </record>
 
+        <record id="order_search_view" model="ir.ui.view">
+            <field name="name">Order Search</field>
+            <field name="model">order</field>
+            <field name="arch" type="xml">
+                <search string="">
+                    <field name="customer_id"/>
+                    <group>
+                        <filter string="Group By Order Date" name="group_order_by_date"
+                                context="{'group_by':'order_date'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+
         <record id="order_action_1" model="ir.actions.act_window">
             <field name="name">Orders</field>
             <field name="type">ir.actions.act_window</field>

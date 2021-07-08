@@ -55,6 +55,21 @@
             </field>
         </record>
 
+        <record id="customer_search_view" model="ir.ui.view">
+            <field name="name">Customer Search</field>
+            <field name="model">customer</field>
+            <field name="arch" type="xml">
+                <search string="">
+                    <field name="name"/>
+                    <field name="phone"/>
+                    <field name="add"/>
+                    <group>
+                        <filter string="Group By Gender" name="group_gender" context="{'group_by':'gender'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
         <record id="customer_action_1" model="ir.actions.act_window">
             <field name="name">Customers</field>
             <field name="type">ir.actions.act_window</field>

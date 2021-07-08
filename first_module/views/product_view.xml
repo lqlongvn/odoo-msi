@@ -47,7 +47,7 @@
             </field>
         </record>
 
-        <record id="product_searc_view" model="ir.ui.view">
+        <record id="product_search_view" model="ir.ui.view">
             <field name="name">Product Search</field>
             <field name="model">product</field>
             <field name="arch" type="xml">
