@@ -8,3 +8,5 @@ class Products(models.Model):
     price = fields.Integer(string='Price')
     date = fields.Datetime(string='Date')
 
+    order_line_ids = fields.One2many(comodel_name='order_line', inverse_name='products_id', string='Order Line')
+

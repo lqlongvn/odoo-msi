@@ -23,6 +23,7 @@
                             <group>
                                 <field name="created_date"/>
                                 <field name="order_id"/>
+                                <field name="products_id"/>
                             </group>
                             <group>
                                 <field name="qty"/>
