@@ -49,7 +49,13 @@ class Product(models.Model):
         return result
 
     def unlink(self):
-        return super(Product, self).unlink()
+    #     return super(Product, self).unlink()
+        if self.warranty != 'warranty':
+            return super(Product, self).unlink()
+        else:
+            raise ValidationError('Warranty Product, cannot be deleted!')
+
+
 
     @api.onchange('price')
     def onchange_price(self):
