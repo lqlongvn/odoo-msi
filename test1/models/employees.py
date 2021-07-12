@@ -10,3 +10,13 @@ class Employees(models.Model):
 
     def work(self):
         pass
+
+    # Biến và Hàm cho Smart Button
+    employees_count = fields.Integer(compute='get_employees_count', string='SL Nhân viên', store=True)
+    def get_employees_count(self):
+        self.employees_count = 8
+        pass
+
+
+
+

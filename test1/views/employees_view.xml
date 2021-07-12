@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
+
+        <!--Code cho Smart Button-->
+        <record id="list_employees_action" model="ir.actions.act_window">
+            <field name="name">Employees</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">employees1</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('id', '=', active_id)]</field>
+        </record>
+
         <record id="employees_tree_view" model="ir.ui.view">
             <field name="name">Employees Tree View</field>
             <field name="model">employees1</field>
@@ -20,14 +30,21 @@
                 <form string="">
                     <header>
                         <button name="work" string="Work" type="object" class="btn-primary"/>
-                        <field name="state" widget="statusbar" /> <!-- options="{'clickable': '1'}" -->
+                        <field name="state" widget="statusbar"/> <!-- options="{'clickable': '1'}" -->
                     </header>
                     <sheet>
+                        <!--Code cho Smart Button-->
+                        <div class="oe_button_box" name="button_box">
+                            <button class="oe_stat_button" type="action"
+                                    name="%(test1.list_employees_action)d">
+                                <field name="employees_count" widget="statinfo"/>
+                            </button>
+                        </div>
                         <group>
                             <group>
-                                <field name="name" />
-<!--                                <field name="state" />-->
-                                <field name="active" />
+                                <field name="name"/>
+                                <!--                                <field name="state" />-->
+                                <field name="active"/>
                             </group>
                         </group>
                     </sheet>
@@ -35,6 +52,7 @@
             </field>
         </record>
 
+        <!-- Code cho Menu-->
         <record id="employees_action_1" model="ir.actions.act_window">
             <field name="name">Employees</field>
             <field name="type">ir.actions.act_window</field>
@@ -42,13 +60,7 @@
             <field name="view_mode">tree,form</field>
         </record>
 
-
-        <menuitem id="employees_root_menu" name="Test1"  action="test1.employees_action_1" sequence="4"/>
-<!--        <menuitem id="employee_menu_1" name="Thông tin Employee" parent = "module_1.employee_root_menu" action="module_1.user_action_1" sequence="2"/>-->
-
-
-<!--        <menuitem id="first_module_employee_menu" name="Employees" parent="first_module.first_module_root_menu"-->
-<!--                  action="first_module.first_module_employee_action" sequence="3"/>-->
+        <menuitem id="employees_root_menu" name="Test1" action="test1.employees_action_1" sequence="4"/>
 
     </data>
 </odoo>
