@@ -2,7 +2,7 @@ from odoo import fields, models, api, osv
 from odoo.exceptions import ValidationError
 
 class Order(models.Model):
-    _name = 'order'
+    _name = 'orders'
 
     # customer_id = fields.Integer(string='Customer ID of Order')
     # customer_id = fields.Many2one('order', string='Customer')

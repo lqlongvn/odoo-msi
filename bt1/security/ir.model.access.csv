@@ -1,8 +1,8 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_customer_user,access_customer_user,model_customer,bt1.group_customer_user,1,0,0,0
 access_customer_manager,access_customer_manager,model_customer,bt1.group_customer_manager,1,1,1,1
-access_order_user,access_order_user,model_order,bt1.group_customer_user,1,0,0,0
-access_order_manager,access_order_manager,model_order,bt1.group_customer_manager,1,1,1,1
+access_order_user,access_order_user,model_orders,bt1.group_customer_user,1,0,0,0
+access_order_manager,access_order_manager,model_orders,bt1.group_customer_manager,1,1,1,1
 access_orderline_user,access_orderline_user,model_order_line,bt1.group_customer_user,1,0,0,0
 access_orderline_manager,access_orderline_manager,model_order_line,bt1.group_customer_manager,1,1,1,1
 access_products_user,access_products_user,model_products,bt1.group_customer_user,1,0,0,0

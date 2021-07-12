@@ -11,7 +11,7 @@
 
         <record id="order_tree_view" model="ir.ui.view">
             <field name="name">Order Tree View</field>
-            <field name="model">order</field>
+            <field name="model">orders</field>
             <field name="arch" type="xml">
                 <tree string="">
                     <field name="order_date"/>
@@ -24,7 +24,7 @@
 
         <record id="order_form_view" model="ir.ui.view">
             <field name="name">Order Form View</field>
-            <field name="model">order</field>
+            <field name="model">orders</field>
             <field name="arch" type="xml">
                 <form string="">
                     <header>
@@ -56,7 +56,7 @@
 
         <record id="order_search_view" model="ir.ui.view">
             <field name="name">Order Search</field>
-            <field name="model">order</field>
+            <field name="model">orders</field>
             <field name="arch" type="xml">
                 <search string="">
                     <field name="customer_id"/>
@@ -72,7 +72,7 @@
         <record id="order_action_1" model="ir.actions.act_window">
             <field name="name">Orders</field>
             <field name="type">ir.actions.act_window</field>
-            <field name="res_model">order</field>
+            <field name="res_model">orders</field>
             <field name="view_mode">tree,form</field>
         </record>
 

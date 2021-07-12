@@ -5,7 +5,7 @@ class Order_line(models.Model):
 
     # order_id = fields.Integer(string='Order ID')
     # product_id = fields.Integer(string='Product ID')
-    order_id = fields.Many2one('order', string='Order')
+    order_id = fields.Many2one('orders', string='Order')
     products_id = fields.Many2one('products', string ='Product')
 
     created_date = fields.Datetime(string='Created Date')

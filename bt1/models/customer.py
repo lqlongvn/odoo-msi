@@ -9,7 +9,7 @@ class Customer(models.Model):
     add = fields.Char(string='Address')
     gender = fields.Char(string='Giới tính', default="male")
 
-    order_ids = fields.One2many(comodel_name='order', inverse_name='customer_id', string='Orders')
+    order_ids = fields.One2many(comodel_name='orders', inverse_name='customer_id', string='Orders')
 
     customer_order_count = fields.Integer(compute='get_order_count', string='Count', store=True)
 
