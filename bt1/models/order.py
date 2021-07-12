@@ -44,11 +44,11 @@ class Order(models.Model):
             self.state = '0'
         # self.active = not self.active
 
-    def unlink(self):
-        if self.state != '2':
-            return super(Order, self).unlink()
-        else:
-            raise ValidationError('Order already Done, cannot be deleted!')
+    # def unlink(self):
+    #     if self.state != '2':
+    #         return super(Order, self).unlink()
+    #     else:
+    #         raise ValidationError('Order already Done, cannot be deleted!')
 
 
 
