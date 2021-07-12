@@ -1,4 +1,5 @@
 from odoo import fields, models, api, osv
+from odoo.exceptions import ValidationError
 
 class Order(models.Model):
     _name = 'order'
@@ -46,7 +47,8 @@ class Order(models.Model):
     def unlink(self):
         if self.state != '2':
             return super(Order, self).unlink()
-        # else:
-        # raise Warning(('Attention!'), ('Hello'))
+        else:
+            raise ValidationError('Order already Done, cannot be deleted!')
+
 
 
