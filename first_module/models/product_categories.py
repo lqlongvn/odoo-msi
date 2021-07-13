@@ -7,14 +7,13 @@ class Product_categories(models.Model):
     name = fields.Char(string='Product category Name', required=True)
     description = fields.Char(string='Mô tả Chủng loại')
     product_ids = fields.One2many(comodel_name='product', inverse_name='category_id', string='Product')
-    product_count = fields.Integer(compute='get_product_count', string='Product Count', store=True)
+    product_count = fields.Integer(compute='get_product_count', string='Product Count', store=False)
 
     @api.depends('product_ids')
     def get_product_count(self):
         for category in self:
-            print(category.product_ids[0].name)
-            # category.product_count = 0
             category.product_count = len(category.product_ids)
+        return category.product_count
 
 
     # @api.model
