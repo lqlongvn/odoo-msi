@@ -28,7 +28,7 @@
             <field name="arch" type="xml">
                 <form string="">
                     <header>
-                        <button name="cancel_order" string="Xử lý Order" type="object" class="btn-primary"  style="background-color:red;"/>
+                        <button name="cancel_order" string="Cancel Order" type="object" class="btn-primary"/>
                         <field name="state" widget="statusbar"/>
                     </header>
                     <sheet>
