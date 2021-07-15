@@ -48,6 +48,7 @@
                             <group>
                                 <field name="gender"/>
                                 <field name="add" attrs = "{'invisible': [('phone', '=', False)]}"/>
+<!--                                <field name="add" attrs = "{'required': [('phone', '!=', False)]}"/>-->
                             </group>
                         </group>
                     </sheet>
