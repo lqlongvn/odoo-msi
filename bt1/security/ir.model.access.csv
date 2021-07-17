@@ -9,4 +9,6 @@ access_products_user,access_products_user,model_products,bt1.group_customer_user
 access_products_manager,access_products_manager,model_products,bt1.group_customer_manager,1,1,1,1
 access_transient_user,access_transient_user,model_count_order,bt1.group_customer_user,1,0,1,0
 access_transient_manager,access_transient_manager,model_count_order,bt1.group_customer_manager,1,1,1,1
+access_order_employees,access_order_employees,model_orders,bt1.group_customer_employees,1,1,1,1
+access_order_employees,access_order_employees,model_order_line,bt1.group_customer_employees,1,1,1,1
 

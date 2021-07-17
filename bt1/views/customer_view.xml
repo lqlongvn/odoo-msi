@@ -29,7 +29,7 @@
             <field name="arch" type="xml">
                 <form string="">
                     <header>
-                        <button string="Order Count" type="action" name="%(bt1.order_count_action)d"/>
+                        <button string="Order Count" type="action" name="%(bt1.order_count_action)d" class="btn-primary"/>
 <!--                        <field name="state" widget="statusbar"/>-->
                     </header>
                     <sheet>

@@ -3,11 +3,13 @@
     <data>
         <!--   Tạo Group quyền cho Customer -->
         <record model="ir.module.category" id="customer_group_id">
-            <field name="name">Customer Group</field>
-            <field name="description">Customer Group</field>
+            <field name="name">Customers(bt) Group</field>
+            <field name="description">Customers(bt) Group</field>
             <field name="sequence">7</field>
         </record>
 
+
+        <!-- Nhóm customer_user và customer_manager chuẩn     -->
         <record id="group_customer_user" model="res.groups">
             <field name="name">Customer User</field>
             <field name="category_id" ref="bt1.customer_group_id"/>
@@ -18,6 +20,14 @@
             <field name="category_id" ref="bt1.customer_group_id"/>
             <field name="implied_ids" eval="[(4, ref('bt1.group_customer_user'))]"/>
         </record>
+
+        <!-- Long tạo thêm Nhóm thứ 3 là Employees theo yêu cầu của câu 4, bài tập   -->
+        <record id="group_customer_employees" model="res.groups">
+            <field name="name">Employees (câu 4)</field>
+            <field name="category_id" ref="bt1.customer_group_id"/>
+        </record>
+
+
 
         <!--   User nào tạo bản ghi nào thì chỉ được xem bản ghi đó -->
         <record id="customer_access_by_creation_user" model="ir.rule">
