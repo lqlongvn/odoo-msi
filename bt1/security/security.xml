@@ -27,6 +27,17 @@
             <field name="category_id" ref="bt1.customer_group_id"/>
         </record>
 
+        <!-- Long tạo thêm Group thứ 4 là order manager theo yêu cầu của câu 5, bài tập   -->
+        <record id="group_order_manager" model="res.groups">
+            <field name="name">Order Manager (câu 5)</field>
+            <field name="category_id" ref="bt1.customer_group_id"/>
+        </record>
+
+        <!-- Long tạo thêm Group thứ 5 là customer manager theo yêu cầu của câu 5, bài tập   -->
+        <record id="group_customer_manager" model="res.groups">
+            <field name="name">Customer  Manager (câu 5)</field>
+            <field name="category_id" ref="bt1.customer_group_id"/>
+        </record>
 
 
         <!--   User nào tạo bản ghi nào thì chỉ được xem bản ghi đó -->

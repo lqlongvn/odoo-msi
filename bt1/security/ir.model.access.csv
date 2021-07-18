@@ -11,4 +11,6 @@ access_transient_user,access_transient_user,model_count_order,bt1.group_customer
 access_transient_manager,access_transient_manager,model_count_order,bt1.group_customer_manager,1,1,1,1
 access_order_employees,access_order_employees,model_orders,bt1.group_customer_employees,1,1,1,1
 access_order_employees,access_order_employees,model_order_line,bt1.group_customer_employees,1,1,1,1
-
+access_order_manager,access_order_manager,model_orders,bt1.group_order_manager,1,1,1,1
+access_order_manager,access_order_manager,model_order_line,bt1.group_order_manager,1,1,1,1
+access_customer_manager,access_customer_manager,model_customer,bt1.group_customer_manager,1,1,1,1
