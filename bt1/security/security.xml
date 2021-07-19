@@ -39,6 +39,12 @@
             <field name="category_id" ref="bt1.customer_group_id"/>
         </record>
 
+        <!-- Tạo thêm Group thứ 6 là Order User  theo yêu cầu của câu 6.1, bài tập   -->
+        <record id="group_order_user" model="res.groups">
+            <field name="name">Order User (câu 6.1)</field>
+            <field name="category_id" ref="bt1.customer_group_id"/>
+        </record>
+
 
         <!--   User nào tạo bản ghi nào thì chỉ được xem bản ghi đó -->
         <record id="customer_access_by_creation_user" model="ir.rule">

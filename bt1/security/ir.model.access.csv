@@ -15,3 +15,4 @@ access_customer_manager,access_customer_manager,model_customer,bt1.group_custome
 access_order_employees,access_order_employees,model_orders,bt1.group_customer_employees,1,0,0,0
 access_orderline_employees,access_orderline_employees,model_order_line,bt1.group_customer_employees,1,0,0,0
 access_customer_employees,access_customer_employees,model_orders,bt1.group_customer_employees,1,0,0,0
+access_order_user,access_order_user,model_orders,bt1.group_order_user,1,0,0,0
