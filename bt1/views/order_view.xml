@@ -78,7 +78,9 @@
 
 
 <!--        <menuitem id="customer_root_menu" name="Quản lý Customer" sequence="1"/>-->
-        <menuitem id="order_menu_1" name="Order" parent = "bt1.customer_root_menu" action="bt1.order_action_1" sequence="3"/>
+        <menuitem id="order_menu_1" name="Order" parent = "bt1.customer_root_menu" action="bt1.order_action_1" sequence="3"
+        groups="bt1.group_order_manager"
+        />
 
     </data>
 </odoo>
