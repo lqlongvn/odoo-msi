@@ -5,10 +5,10 @@
             <field name="name">Display order count of Customer</field>
             <field name="model">count.order</field>
             <field name="arch" type="xml">
+                <group>
+                    <field name="count_order_of_customer"/>
+                </group>
                 <form string="Order count of Customer">
-<!--                    <group>-->
-<!--                        <field name="reason" required="1"/>-->
-<!--                    </group>-->
                     <footer>
                         <button string="Cancel" special="cancel" class="btn-secondary"/>
                     </footer>
