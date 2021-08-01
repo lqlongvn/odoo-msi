@@ -6,7 +6,7 @@
             <field name="model">count.order</field>
             <field name="arch" type="xml">
                 <group>
-                    <field name="count_order_of_customer"/>
+                    <field name="count_order_of_customer" attrs="{'readonly': [(1,'=',1)]}"/>
                 </group>
                 <form string="Order count of Customer">
                     <footer>
