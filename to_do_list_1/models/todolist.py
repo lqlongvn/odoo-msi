@@ -3,7 +3,9 @@ from odoo import fields, models, api
 class ToDoList(models.Model):
     _name = 'todolist'
 
-    name = fields.Char(string='Nội dung công việc phải làm')
+    ngay_batdau = fields.Date(string='Ngày bắt đầu công việc')
+    name = fields.Text(string='Nội dung công việc phải làm')
+    ketqua = fields.Char(string='Kết quả thực hiện')
     state = fields.Selection(
         selection=[('0', 'Đang thực hiện'), ('1', 'Hoàn thành'), ('2', 'Tạm dừng'), ('3', 'Đã hủy')], string='Trạng thái')
 
