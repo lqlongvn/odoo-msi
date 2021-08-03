@@ -1,3 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_employees2_user,access_employees2_user,model_employees2,test_odoo.group_employees_user,1,0,0,0
-access_employees2_manager,access_employees2_manager,model_employees2,test_odoo.group_employees_manager,1,1,1,1
+access_supplier_manager,access_supplier_manager,model_todolist1,first_module.group_product_manager,1,1,1,1

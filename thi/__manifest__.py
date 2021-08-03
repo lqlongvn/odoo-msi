@@ -1,18 +1,18 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'Thi',
+    'name': 'thi_1',
     'version': '1.0',
-    'summary': 'Odoo learn',
+    'summary': 'Thi project summary',
     'sequence': 1,
-    'author': 'Mr. Long, ITPLUS',
+    'author': 'Long (Thi)',
     'description': """
-        Odoo learn
+        Thi project description
     """,
     'category': 'Other',
     'website': '',
     'depends': ['sales_team'],
     'data': [
-        'views/employees_view.xml',
+        'views/todolist_view.xml',
         'security/security.xml',
         'security/ir.model.access.csv',
     ],
