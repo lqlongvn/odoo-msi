@@ -12,7 +12,7 @@
     'website': '',
     'depends': ['sales_team'],
     'data': [
-        'views/todolist_view.xml',
+        'views/customer_view.xml',
         'security/security.xml',
         'security/ir.model.access.csv',
     ],
