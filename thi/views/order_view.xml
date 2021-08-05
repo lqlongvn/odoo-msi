@@ -13,11 +13,14 @@
             </field>
         </record>
 
-        <record id="customer1_form_view" model="ir.ui.view">
+        <record id="order_form_view" model="ir.ui.view">
             <field name="name">Order1 Form View</field>
             <field name="model">order1</field>
             <field name="arch" type="xml">
                 <form string="">
+                    <header>
+                        <button name="cancel_order" string="Cancel Order" type="object" class="btn-primary"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>

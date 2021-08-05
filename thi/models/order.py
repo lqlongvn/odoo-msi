@@ -19,3 +19,6 @@ class Order(models.Model):
             return super(Order, self).unlink()
         else:
             raise ValidationError('Order already Done, cannot be deleted!')
+
+    def cancel_order(self):
+        self.state = '0'
