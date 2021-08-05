@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
+        <!-- Tạo group order_manager, customer_manager  -->
+        <record model="ir.module.category" id="order_customer_group_id">
+            <field name="name">name: Customer (thi) Project Group</field>
+            <field name="description">desc: Customer (thi) Project Group</field>
+            <field name="sequence">7</field>
+        </record>
+
+        <record id="group_order_manager" model="res.groups">
+            <field name="name">Order Manager</field>
+            <field name="category_id" ref="thi.order_customer_group_id"/>
+<!--            <field name="implied_ids" eval="[(4, ref('first_module.group_product_user'))]"/>-->
+        </record>
+
+        <record id="group_customer_manager" model="res.groups">
+            <field name="name">Customer Manager</field>
+            <field name="category_id" ref="thi.order_customer_group_id"/>
+<!--            <field name="implied_ids" eval="[(4, ref('first_module.group_product_user'))]"/>-->
+        </record>
+
+
+
 
     </data>
 </odoo>
