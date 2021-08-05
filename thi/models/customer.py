@@ -1,5 +1,7 @@
 from odoo import fields, models, api
 
+# customer (id, name, phone, address, gender - gan gender mac dinh la male)
+
 class Customer(models.Model):
     _name = 'customer1'
 

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="orderline1_tree_view" model="ir.ui.view">
+            <field name="name">Order Line Tree View</field>
+            <field name="model">orderline1</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="name"/>
+                    <field name="created_date"/>
+                    <field name="qty"/>
+                    <field name="unit_price"/>
+                    <field name="thanhtien"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="orderline1_form_view" model="ir.ui.view">
+            <field name="name">Order Line Form View</field>
+            <field name="model">orderline1</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="created_date"/>
+                            </group>
+                            <group>
+                                <field name="qty"/>
+                                <field name="unit_price"/>
+                                <field name="thanhtien"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="orderline_action_1" model="ir.actions.act_window">
+            <field name="name">Order_Line</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">orderline1</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="orderline_menu_1" name="Order_line " parent = "thi.customer_root_menu" action="thi.orderline_action_1" sequence="3"
+        />
+
+
+    </data>
+</odoo>

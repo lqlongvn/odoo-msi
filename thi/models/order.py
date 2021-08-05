@@ -1,11 +1,13 @@
 from odoo import fields, models, api
 from odoo.exceptions import ValidationError
 
+# model order (customer_id, order_date, total_amount=sum(line.sub_total), order_ids)
+
 class Order(models.Model):
     _name = 'order1'
 
     name = fields.Char(string='Tên đơn hàng')
-    order_date = fields.Char(string='Ngày đơn hàng')
+    order_date = fields.Date(string='Ngày đơn hàng')
 
 
     state = fields.Selection(
