@@ -4,3 +4,5 @@ access_first_module_order_manager,access_order_manager,model_order1,first_module
 access_first_module_orderline_manager,access_orderline_manager,model_orderline1,first_module.group_product_manager,1,1,1,1
 access_customer_manager,access_customer_manager,model_customer1,thi.group_order_manager,1,1,1,1
 access_order_manager,access_order_manager,model_order1,thi.group_customer_manager,1,1,1,1
+access_customer_employee,access_customer_employee,model_order1,thi.group_customer_employee,1,1,1,1
+access_customer_employee,access_customer_employee,model_orderline1,thi.group_customer_employee,1,1,1,1

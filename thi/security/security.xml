@@ -8,20 +8,26 @@
             <field name="sequence">7</field>
         </record>
 
+        <!-- Tạo group order_manager  -->
         <record id="group_order_manager" model="res.groups">
             <field name="name">Order Manager</field>
             <field name="category_id" ref="thi.order_customer_group_id"/>
 <!--            <field name="implied_ids" eval="[(4, ref('first_module.group_product_user'))]"/>-->
         </record>
 
+        <!-- Tạo group  customer_employee  -->
+        <record id="group_customer_employee" model="res.groups">
+            <field name="name">Customer Employee</field>
+            <field name="category_id" ref="thi.order_customer_group_id"/>
+<!--            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>-->
+        </record>
+
+        <!-- Tạo group  customer_manager  -->
         <record id="group_customer_manager" model="res.groups">
             <field name="name">Customer Manager</field>
             <field name="category_id" ref="thi.order_customer_group_id"/>
-<!--            <field name="implied_ids" eval="[(4, ref('first_module.group_product_user'))]"/>-->
+            <field name="implied_ids" eval="[(4, ref('thi.group_customer_employee'))]"/>
         </record>
-
-
-
 
     </data>
 </odoo>
