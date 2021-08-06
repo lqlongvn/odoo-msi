@@ -10,6 +10,8 @@ class Customer(models.Model):
     address = fields.Char(string='Địa chỉ')
     gender = fields.Char(string='Giới tính', default='male')
 
+    order_ids = fields.One2many(comodel_name='order1', inverse_name='customer_id', string='Orders')
+
     @api.model
     def create(self, vals):
         vals['name'] = vals['name'].title()

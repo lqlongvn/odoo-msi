@@ -8,7 +8,7 @@ class Order(models.Model):
 
     name = fields.Char(string='Tên đơn hàng')
     order_date = fields.Date(string='Ngày đơn hàng')
-
+    customer_id = fields.Many2one(comodel_name='customer1', string='Customers')
 
     state = fields.Selection(
         selection=[('0', 'Draft'), ('1', 'Doing'), ('2', 'Done'), ('3', 'Cancel order')],
