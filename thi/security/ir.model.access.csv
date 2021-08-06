@@ -1,4 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_transient_manager,access_transient_manager,model_customertotalmoney,first_module.group_product_manager,1,1,1,1
 access_first_module_customer_manager,access_customer_manager,model_customer1,first_module.group_product_manager,1,1,1,1
 access_first_module_order_manager,access_order_manager,model_order1,first_module.group_product_manager,1,1,1,1
 access_first_module_orderline_manager,access_orderline_manager,model_orderline1,first_module.group_product_manager,1,1,1,1
