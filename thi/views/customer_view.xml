@@ -47,7 +47,9 @@
                                 <field name="order_ids"/>
                             </group>
                             <group>
-                                <field name="address"/>
+                                <!--   <field name="address"/>-->
+                                <!--  <field name="add" attrs = "{'required': [('phone', '!=', False)]}"/>  -->
+                                <field name="address" attrs = "{'invisible': [('phone', '=', False)]}"/>
                                 <field name="gender"/>
                             </group>
                         </group>
