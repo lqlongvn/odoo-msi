@@ -16,3 +16,5 @@ class OrderLine(models.Model):
         for product in self:
             product.thanhtien = product.qty * product.unit_price
 
+    product_id = fields.Many2one(comodel_name='product1', string='Product')
+
