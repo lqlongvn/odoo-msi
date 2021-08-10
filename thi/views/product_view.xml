@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="product1_tree_view" model="ir.ui.view">
+            <field name="name">Product Tree View</field>
+            <field name="model">product1</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="product_date"/>
+                    <field name="product_price"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="product_form_view" model="ir.ui.view">
+            <field name="name">Product Form View</field>
+            <field name="model">product1</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="description"/>
+                            </group>
+                            <group>
+                                <field name="product_date"/>
+                                <field name="product_price"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="product_action_1" model="ir.actions.act_window">
+            <field name="name">Orders</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product1</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="product_menu_1" name="Product" parent = "thi.customer_root_menu" action="thi.product_action_1" sequence="3"
+        />
+
+
+    </data>
+</odoo>
