@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="customer1_tree_view" model="ir.ui.view">
+            <field name="name">Customer2 Tree View</field>
+            <field name="model">customer2</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="name"/>
+                    <field name="phone"/>
+                    <field name="address"/>
+                    <field name="gender"/>
+                </tree>
+            </field>
+        </record>
+        <record id="customer1_form_view" model="ir.ui.view">
+            <field name="name">Customer2  Form View</field>
+            <field name="model">customer2</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="phone"/>
+                            </group>
+                            <group>
+                                <field name="address" attrs="{'invisible': [('phone', '=', False)]}"/>
+                                <field name="gender"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="customer_action_1" model="ir.actions.act_window">
+            <field name="name">Customer1</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">customer2</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="customer_root_menu" name="Menu Thi-2 (Customer)" action="thi_2.customer_action_1" sequence="1"/>
+        <menuitem id="customer_menu_1" name="Customer" parent="thi_2.customer_root_menu" action="thi_2.customer_action_1"
+                  sequence="1"
+        />
+
+    </data>
+</odoo>
