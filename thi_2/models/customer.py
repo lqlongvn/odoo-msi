@@ -9,3 +9,6 @@ class Customer(models.Model):
     phone = fields.Char(string='Điện thoại')
     address = fields.Char(string='Địa chỉ')
     gender = fields.Char(string='Giới tính', default='male')
+
+    order_ids = fields.One2many(comodel_name='order1', inverse_name='customer_id', string='Orders')
+

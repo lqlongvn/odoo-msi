@@ -8,6 +8,7 @@
                 <tree string="">
                     <field name="name"/>
                     <field name="phone"/>
+                    <field name="order_ids"/>
                     <field name="address"/>
                     <field name="gender"/>
                 </tree>
@@ -23,6 +24,7 @@
                             <group>
                                 <field name="name"/>
                                 <field name="phone"/>
+                                <field name="order_ids"/>
                             </group>
                             <group>
                                 <field name="address" attrs="{'invisible': [('phone', '=', False)]}"/>
