@@ -10,5 +10,5 @@ class Customer(models.Model):
     address = fields.Char(string='Địa chỉ')
     gender = fields.Char(string='Giới tính', default='male')
 
-    order_ids = fields.One2many(comodel_name='order1', inverse_name='customer_id', string='Orders')
+    order_ids = fields.One2many(comodel_name='order2', inverse_name='customer_id', string='Orders')
 
