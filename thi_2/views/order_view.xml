@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="order2_tree_view" model="ir.ui.view">
+            <field name="name">Order Tree View</field>
+            <field name="model">order2</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="name"/>
+                    <field name="order_date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="order2_form_view" model="ir.ui.view">
+            <field name="name">Order2 Form View</field>
+            <field name="model">order2</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="order_date"/>
+                            </group>
+                            <group>
+                                <field name="state"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="order2_action_1" model="ir.actions.act_window">
+            <field name="name">Order2</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">order2</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="order_menu_1" name="Order" parent = "thi_2.customer_root_menu" action="thi_2.order2_action_1" sequence="3"
+        />
+
+
+    </data>
+</odoo>
