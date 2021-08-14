@@ -14,3 +14,6 @@ class Order(models.Model):
     state = fields.Selection(
         selection=[('0', 'Draft'), ('1', 'Doing'), ('2', 'Done'), ('3', 'Cancel order')],
         string='Trạng thái')
+
+    def cancel_order(self):
+        self.state = '0'
