@@ -12,6 +12,7 @@
     'website': '',
     'depends': ['sales_team'],
     'data': [
+        'wizard/customer_total_money_view.xml',
         'views/customer_view.xml',
         'views/order_view.xml',
         'views/order_line_view.xml',

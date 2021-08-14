@@ -27,8 +27,12 @@
             <field name="model">customer2</field>
             <field name="arch" type="xml">
                 <form string="">
+                    <header>
+                        <button string="Total money of Order" type="action" name="%(thi_2.customer_total_money_action)d"
+                                class="btn-primary"/>
+                    </header>
                     <sheet>
-                        <div class="oe_button_box" name="button_box">
+                    <div class="oe_button_box" name="button_box">
                             <button class="oe_stat_button" type="action"
                                     name="%(thi_2.list_customer_by_order_action)d">
                                 <field name="customer_order_count" widget="statinfo"/>
