@@ -11,3 +11,5 @@ class OrderLine(models.Model):
     unit_price = fields.Integer(string='Đơn giá')
 
     order_id = fields.Many2one(comodel_name='order2', string='Order')
+
+    product_id = fields.Many2one(comodel_name='product2', string='Product')

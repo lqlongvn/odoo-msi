@@ -10,6 +10,7 @@
                     <field name="description"/>
                     <field name="product_date"/>
                     <field name="product_price"/>
+                    <field name="orderline_ids"/>
                 </tree>
             </field>
         </record>
@@ -24,6 +25,7 @@
                             <group>
                                 <field name="name"/>
                                 <field name="description"/>
+                                <field name="orderline_ids"/>
                             </group>
                             <group>
                                 <field name="product_date"/>
