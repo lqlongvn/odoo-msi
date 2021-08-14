@@ -10,3 +10,4 @@ class OrderLine(models.Model):
     qty = fields.Integer(string='Số lượng')
     unit_price = fields.Integer(string='Đơn giá')
 
+    order_id = fields.Many2one(comodel_name='order2', string='Order')

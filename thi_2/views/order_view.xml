@@ -9,6 +9,7 @@
                     <field name="name"/>
                     <field name="order_date"/>
                     <field name="customer_id"/>
+                    <field name="orderline_ids"/>
                     <field name="state"/>
                 </tree>
             </field>
@@ -24,6 +25,7 @@
                             <group>
                                 <field name="name"/>
                                 <field name="order_date"/>
+                                <field name="orderline_ids"/>
                             </group>
                             <group>
                                 <field name="customer_id"/>
