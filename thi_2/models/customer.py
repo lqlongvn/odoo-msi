@@ -12,3 +12,10 @@ class Customer(models.Model):
 
     order_ids = fields.One2many(comodel_name='order2', inverse_name='customer_id', string='Orders')
 
+    customer_order_count = fields.Integer(compute='get_order_count', string='Count', store=False)
+    @api.depends('order_ids')
+    def get_order_count(self):
+        for customer in self:
+            customer.customer_order_count = len(customer.order_ids)
+        return customer.customer_order_count
+
