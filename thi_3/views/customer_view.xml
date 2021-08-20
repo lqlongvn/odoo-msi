@@ -3,7 +3,7 @@
     <data>
         <record id="customer3_tree_view" model="ir.ui.view">
             <field name="name">Customer3 Tree View</field>
-            <field name="model">customer3</field>
+            <field name="model">khachhang</field>
             <field name="arch" type="xml">
                 <tree string="">
                     <field name="name"/>
@@ -15,7 +15,7 @@
         </record>
         <record id="customer3_form_view" model="ir.ui.view">
             <field name="name">Customer3  Form View</field>
-            <field name="model">customer3</field>
+            <field name="model">khachhang</field>
             <field name="arch" type="xml">
                 <form string="">
                     <sheet>
@@ -37,7 +37,7 @@
         <record id="customer_action_1" model="ir.actions.act_window">
             <field name="name">Customer3</field>
             <field name="type">ir.actions.act_window</field>
-            <field name="res_model">customer3</field>
+            <field name="res_model">khachhang</field>
             <field name="view_mode">tree,form</field>
         </record>
 
