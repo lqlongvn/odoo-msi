@@ -66,5 +66,21 @@
                   sequence="1"
         />
 
+        <record id="customer_search_view" model="ir.ui.view">
+            <field name="name">Customer Search</field>
+            <field name="model">customer2</field>
+            <field name="arch" type="xml">
+                <search string="">
+                    <field name="name"/>
+                    <field name="phone"/>
+                    <field name="address"/>
+                    <group>
+                        <filter string="Group By Gender" name="group_gender" context="{'group_by':'gender'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+
     </data>
 </odoo>
