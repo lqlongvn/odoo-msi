@@ -17,6 +17,7 @@
         'views/order_view.xml',
         'views/order_line_view.xml',
         'views/product_view.xml',
+        'security/security.xml',
         'security/ir.model.access.csv',
     ],
     'installable': True,
