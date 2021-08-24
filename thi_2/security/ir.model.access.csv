@@ -11,3 +11,5 @@ access_order_manager,access_order_manager,model_order2,bt1.group_order_manager,1
 access_orderline_manager,access_orderline_manager,model_orderline2,bt1.group_order_manager,1,1,1,1
 
 access_customer_manager,access_customer_manager,model_customer2,thi_2.group_customer_manager,1,1,1,1
+
+access_customer_manager,access_customer_manager,model_customer2,thi_2.group_customer_user,1,0,0,0
