@@ -5,9 +5,9 @@
             <field name="name">Display order count of Customer</field>
             <field name="model">count.order</field>
             <field name="arch" type="xml">
-                <group>
-                    <field name="count_order_of_customer" attrs="{'readonly': [(1,'=',1)]}"/>
-                </group>
+<!--                <group>-->
+<!--                    <field name="count_order_of_customer" attrs="{'readonly': [(1,'=',1)]}"/>-->
+<!--                </group>-->
                 <form string="Order count of Customer">
                     <footer>
                         <button string="Cancel" special="cancel" class="btn-secondary"/>

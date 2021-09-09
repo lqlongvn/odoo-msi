@@ -5,9 +5,9 @@
             <field name="name">Display order count of Customer</field>
             <field name="model">customertotalmoney2</field>
             <field name="arch" type="xml">
-                <group>
-                    <field name="customer_total_money" attrs="{'readonly': [(1,'=',1)]}"/>
-                </group>
+<!--                <group>-->
+<!--                    <field name="customer_total_money" attrs="{'readonly': [(1,'=',1)]}"/>-->
+<!--                </group>-->
                 <form string="Customer total money">
                     <footer>
                         <button string="Cancel" special="cancel" class="btn-secondary"/>
