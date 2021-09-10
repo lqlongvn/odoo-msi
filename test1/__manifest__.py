@@ -13,6 +13,7 @@
     'depends': ['sales_team'],
     'data': [
         'views/employees_view.xml',
+        'views/my_user_view.xml',
         'security/security.xml',
         'security/ir.model.access.csv',
     ],
