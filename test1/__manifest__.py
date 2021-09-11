@@ -10,7 +10,9 @@
     """,
     'category': 'Other',
     'website': '',
-    'depends': ['sales_team'],
+    'depends': ['sales_team',
+                'base'
+    ],
     'data': [
         'views/employees_view.xml',
         'views/my_user_view.xml',
