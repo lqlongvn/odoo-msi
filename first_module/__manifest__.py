@@ -17,6 +17,7 @@
         'views/categories_view.xml',
         'views/supplier_view.xml',
         'views/employee_view.xml',
+        'views/customer_view.xml',
         'security/security.xml',
         'security/ir.model.access.csv',
     ],

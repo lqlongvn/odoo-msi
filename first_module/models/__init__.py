@@ -1,1 +1,1 @@
-from . import product, product_categories, supplier, employee
+from . import product, product_categories, supplier, employee, customer
