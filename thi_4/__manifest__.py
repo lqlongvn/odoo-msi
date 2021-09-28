@@ -13,6 +13,7 @@
     'depends': [],
     'data': [
         'views/customer_view.xml',
+        'views/order_view.xml',
         'security/ir.model.access.csv',
     ],
     'installable': True,
